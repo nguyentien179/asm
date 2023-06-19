@@ -1,0 +1,25 @@
+<table class="table table-bordered" action="/poster/detail/{{poster._id}}">
+    <tr>
+        <th>Poster Detail</th>
+    </tr>
+    <tr>
+        <th>Image</th>
+        <th>Name</th>
+        <th>Origin</th>
+        <th>Size</th>
+        <th>Manufactur Date</th>
+        <th>Price</th>
+    </tr>
+    <tr>
+        <th><img src="{{poster.image}}" alt="" width="200" height="200"></th>
+        <th>{{poster.name}}</th>
+        <th>{{poster.origin}}</th>
+        <th>{{poster.size}}</th>
+        <th>{{poster.manufacturDate}}</th>
+        <th>{{poster.price}}</th>
+        <th>
+            <a href="/poster/buy/{{poster._id}}" class="btn btn-warning">Buy</a>
+        </th>
+        
+    </tr>
+</table>

@@ -1,0 +1,24 @@
+<table class="table table-bordered" action="/figure/detail/{{figure._id}}">
+    <tr>
+        <th>Figure Detail</th>
+    </tr>
+    <tr>
+        <th>Image</th>
+        <th>Name</th>
+        <th>Origin</th>
+        <th>Size</th>
+        <th>Manufactur Date</th>
+        <th>Price</th>
+    </tr>
+    <tr>
+        <th><img src="{{figure.image}}" alt="" width="200" height="200"></th>
+        <th>{{figure.name}}</th>
+        <th>{{figure.origin}}</th>
+        <th>{{figure.size}}</th>
+        <th>{{figure.manufacturDate}}</th>
+        <th>{{figure.price}}</th>
+        <th>
+            <a href="/figure/buy/{{figure._id}}" class="btn btn-warning">Buy</a>
+        </th>
+    </tr>
+</table>

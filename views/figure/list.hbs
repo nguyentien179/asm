@@ -1,0 +1,31 @@
+<div class="container text-center">
+    <h1 class="text text-warning mb-2">Figure</h1>
+    <div class="row">
+        <div class="col">
+            <a class="btn btn-primary" href="asc">Sort by a-z</a>
+            <a class="btn btn-secondary" href="desc">Sort by z-a</a>
+        </div>
+        <div class="col">
+            <form action="figure/search" method="post" class="d-flex">
+                <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search" name="name">
+                <button class="btn btn-outline-success" type="submit">Search</button>
+            </form>
+        </div>
+    </div>
+    <div class="card-group">
+        <div class="row">
+            {{#each figures }}
+                <div class="card col-md-3 mb-3">
+                    <a href="/figure/detail/{{_id}}">
+                        <img src="{{image}}" alt="" class="card-img-top mt-3" width="300" height="250">
+                    </a>
+                    <div class="card-body">
+                        <h4 class="card-title text-success">{{name}}</h4>
+                        <p class="fw-hold card-text text-danger">{{manufacturDate}}</p>
+                        <a href="/figure/buy/{{_id}}" class="btn btn-warning">Buy</a>
+                    </div>
+                </div>
+            {{/each}}
+        </div>
+    </div>
+</div>

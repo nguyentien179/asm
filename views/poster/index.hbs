@@ -1,0 +1,36 @@
+<table class="table table-bordered">
+    <tr>
+        <th>Poster List</th>
+        <th>
+            <a href="/poster/add" class="btn btn-warning">Add</a>
+        </th>
+        <th>
+            <form action="poster/search" method="post">
+                <input type="search" name="title" placeholder="Search by name" class="form-control" required>
+            </form>
+        </th>
+    </tr>
+    <tr>
+        <th>Image</th>
+        <th>Name</th>
+        <th>Origin</th>
+        <th>Size</th>
+        <th>Manufactur Date</th>
+        <th>Price</th>
+    </tr>
+
+    {{#each posters }}
+    <tr>
+        <th><img src="{{image}}" alt="" width="200" height="200"></th>
+        <th>{{name}}</th>
+        <th>{{origin}}</th>
+        <th>{{size}}</th>
+        <th>{{manufacturDate}}</th>
+        <th>
+            <a href="/poster/edit/{{_id}}" class="btn btn-warning">Edit</a>
+            <a href="/poster/delete/{{_id}}" class="btn btn-warning">Delete</a>
+        </th>
+    </tr>
+    {{/each}}
+
+</table>
