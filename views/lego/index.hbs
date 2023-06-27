@@ -1,0 +1,33 @@
+<table class="table table-bordered">
+    <tr>
+        <th>lego List</th>
+        <th>
+            <a href="/lego/add" class="btn btn-warning">Add</a>
+        </th>
+        <th>
+            <form action="lego/search" method="post" class="d-flex">
+                <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search" name="name">
+                <button class="btn btn-outline-success" type="submit">Search</button>
+            </form>
+        </th>
+    </tr>
+    <tr>
+        <th>Image</th>
+        <th>Name</th>
+        <th>Manufactur Date</th>
+        <th>Price</th>
+    </tr>
+
+    {{#each legos }}
+    <tr>
+        <th><img src="{{image}}" alt="" width="200" height="200"></th>
+        <th>{{name}}</th>
+        <th>{{manufacturDate}}</th>
+        <th>
+            <a href="/lego/edit/{{_id}}" class="btn btn-warning">Edit</a>
+            <a href="/lego/delete/{{_id}}" class="btn btn-warning">Delete</a>
+        </th>
+    </tr>
+    {{/each}}
+
+</table>

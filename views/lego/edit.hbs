@@ -1,0 +1,25 @@
+<div class="container text-center mt-3 mb-3 col-md8">
+    <form class="card bg-light ml-3 mr-3" action="/lego/edit/{{lego._id}}" method="post">
+        <h1 class="text text-primary">Edit lego</h1>
+        <div class="form-group">
+            <label for="">Image</label>
+            <input class="form-control" type="text" name="image" value={{lego.image}} required>
+        </div>
+        <div class="form-group">
+            <label for="">Name</label>
+            <input class="form-control" type="text" name="name" value={{lego.name}} required>
+        </div>
+        <div class="form-group">
+            <label for="">Manufactur Date</label>
+            <input class="form-control" type="number" name="manufacturDate" value={{lego.manufacturDate}} required>
+        </div>
+        <div class="form-group">
+            <label for="">Price</label>
+            <input class="form-control" type="number" name="price" value={{lego.price}} required>
+        </div>
+        
+        <div class="form-group">
+            <input type="submit" class="btn btn-danger" value="Edit">
+        </div>
+    </form>
+</div>

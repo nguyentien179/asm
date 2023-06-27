@@ -49,12 +49,12 @@ router.post('/poster/search', async (req, res) =>
 })
 router.get('/asc', async (req, res) =>
 {
-    var posters = await PosterModel.find().sort({title : 1})
+    var posters = await PosterModel.find().sort({name : 1})
     res.render('poster/list', {posters : posters})
 })
 router.get('/desc', async (req, res) =>
 {
-    var posters = await PosterModel.find().sort({title : -1})
+    var posters = await PosterModel.find().sort({name : -1})
     res.render('poster/list', {posters : posters})
 })
 module.exports = router;

@@ -49,12 +49,12 @@ router.post('/figure/search', async (req, res) =>
 })
 router.get('/asc', async (req, res) =>
 {
-    var figures = await FigureModel.find().sort({title : 1})
+    var figures = await FigureModel.find().sort({name : 1})
     res.render('figure/list', {figures : figures})
 })
 router.get('/desc', async (req, res) =>
 {
-    var figures = await FigureModel.find().sort({title : -1})
+    var figures = await FigureModel.find().sort({name : -1})
     res.render('figure/list', {figures : figures})
 })
 module.exports = router;
